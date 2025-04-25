@@ -1,0 +1,113 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+  }
+  
+  .registration-screen {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Стиль бегущей строки */
+.scrolling-header {
+  position: fixed; /* Фиксированное положение */
+  top: 70px;
+  left: 0;
+  width: 100%; /* Занимает всю ширину экрана */
+  height: 150px; /* Высота строки */
+  overflow: hidden; /* Скрываем переполнение текста */
+  z-index: 1000; /* Чтобы строка была поверх других элементов */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  font-size: 6rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #333, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation:  3s ease-in-out 1s infinite alternate slide-in;
+}
+
+/* Анимация бегущей строки */
+@keyframes slide-in{
+  0% {
+    transform: translateX(20%); /* Начало за правой границей экрана */
+    background: linear-gradient(to right, #333, #007bff);
+    -webkit-background-clip: text;
+  }
+  100% {
+    transform: translateX(-20%); /* Конец за левой границей экрана */
+    background: linear-gradient(to right, #007bff, #333);
+    -webkit-background-clip: text;
+  }
+}
+  
+  /* Стиль формы */
+  .form-container {
+    margin-top: 100px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2; /* Серый фон */
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для лучшей видимости */
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b8d4; /* Голубой цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  .register-button:hover {
+    background-color: #0096a6; /* Темнее голубой цвет */
+  }
+  
+  /* Ссылка для входа */
+  .login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Нижняя часть экрана */
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #888;
+  }

@@ -5,9 +5,9 @@ const LoginScreen: React.FC = () => {
     <div className="login-screen">
       {/* Бегущая строка во весь экран */}
       <div className="scrolling-header">
-        <div className="scrolling-text">
+        <h1 className="scrolling-text">
           The Movie Tracker
-        </div>
+        </h1>
       </div>
 
       {/* Форма для входа */}

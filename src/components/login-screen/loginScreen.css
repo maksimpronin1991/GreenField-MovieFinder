@@ -31,17 +31,24 @@ body {
   white-space: nowrap; /* Запрещаем перенос строк */
   font-size: 6rem;
   font-weight: bold;
-  color: #333;
-  animation: scroll-left 6s linear infinite; /* Анимация */
+  background: linear-gradient(to right, #333, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation:  3s ease-in-out 1s infinite alternate slide-in;
 }
 
 /* Анимация бегущей строки */
-@keyframes scroll-left {
+@keyframes slide-in{
   0% {
-    transform: translateX(130%); /* Начало за правой границей экрана */
+    transform: translateX(20%); /* Начало за правой границей экрана */
+    background: linear-gradient(to right, #333, #007bff);
+    -webkit-background-clip: text;
   }
   100% {
-    transform: translateX(-130%); /* Конец за левой границей экрана */
+    transform: translateX(-20%); /* Конец за левой границей экрана */
+    background: linear-gradient(to right, #007bff, #333);
+    -webkit-background-clip: text;
   }
 }
 
