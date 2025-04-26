@@ -1,28 +1,29 @@
 import React from 'react';
+import styles from "./loginScreen.module.css"
 
 const LoginScreen: React.FC = () => {
   return (
-    <div className="login-screen">
+    <div className={styles.loginScreen}>
       {/* Бегущая строка во весь экран */}
-      <div className="scrolling-header">
-        <h1 className="scrolling-text">
+      <div className={styles.scrollingHeader}>
+        <h1 className={styles.scrollingText}>
           The Movie Tracker
         </h1>
       </div>
 
       {/* Форма для входа */}
-      <div className="form-container">
-        <input type="text" placeholder="Login" className="input-field" />
-        <input type="password" placeholder="Password" className="input-field" />
-        <button className="login-button">Login</button>
-        <p className="signup-text">
+      <form className={styles.formContainer}>
+        <input type="text" placeholder="Login" className={styles.inputField} />
+        <input type="password" placeholder="Password" className={styles.inputField} />
+        <button className={styles.loginButton}>Login</button>
+        <p className={styles.signupText}>
           You don’t have an account?{' '}
-          <span className="signup-link">SignUp</span>
+          <span className={styles.signupLink}>SignUp</span>
         </p>
-      </div>
+      </form>
 
       {/* Нижняя часть экрана */}
-      <div className="footer">
+      <div className={styles.footer}>
         Built with ❤️ GreenField
       </div>
     </div>

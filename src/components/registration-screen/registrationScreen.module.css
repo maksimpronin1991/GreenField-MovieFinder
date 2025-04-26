@@ -1,0 +1,108 @@
+ .registration {
+   text-align: center;
+   width: 100%;
+   max-width: 400px;
+ }
+
+  /* Стиль бегущей строки */
+ .scrollingHeader {
+  position: fixed;
+  /* Фиксированное положение */
+  top: 50px;
+  left: 0;
+  width: 100%;
+  /* Занимает всю ширину экрана */
+  height: 150px;
+  /* Высота строки */
+  overflow: hidden;
+  /* Скрываем переполнение текста */
+  z-index: 1000;
+  /* Чтобы строка была поверх других элементов */
+}
+
+ .scrollingText {
+   display: inline-block;
+   white-space: nowrap;
+   /* Запрещаем перенос строк */
+   font-size: 6rem;
+   font-weight: bold;
+   background: linear-gradient(to right, #333, #007bff);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   animation: 3s ease-in-out 1s infinite alternate slide-in;
+ }
+/* Анимация бегущей строки */
+@keyframes slide-in {
+  0% {
+    transform: translateX(10%);
+    /* Начало за правой границей экрана */
+    background: linear-gradient(to right, #333, #007bff);
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    transform: translateX(-10%);
+    /* Конец за левой границей экрана */
+    background: linear-gradient(to right, #007bff, #333);
+    -webkit-background-clip: text;
+  }
+}
+
+ /* Стиль формы */
+ .formContainer {
+   margin-top: 50px;
+ }
+
+ .inputField {
+  width: 94%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+ .registerButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 40px;
+ }
+
+ .registerButton:hover {
+   background-color: #0096a6;
+   /* Темнее голубой цвет */
+ }
+
+ /* Ссылка для входа */
+ .loginLink {
+   margin-top: 20px;
+   font-size: 0.9rem;
+   color: #666;
+ }
+
+ .link {
+   color: #007bff;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ .link:hover {
+   text-decoration: underline;
+ }
+
+ /* Нижняя часть экрана */
+ .footer {
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 0.8rem;
+   color: #888;
+ }

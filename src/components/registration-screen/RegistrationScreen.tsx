@@ -1,34 +1,36 @@
 import React from 'react';
+import styles from "./registrationScreen.module.css"
 
 const RegistrationScreen: React.FC = () => {
   return (
-    <div className="registration-screen">
-      {/* Заголовок */}
-      <div className="scrolling-header">
-        <h1 className="scrolling-text">
+    <div className={styles.registration}>
+      {/* Бегущая строка во весь экран */}
+      <div className={styles.scrollingHeader}>
+        <h1 className={styles.scrollingText}>
           The Movie Tracker
         </h1>
       </div>
 
       {/* Форма регистрации */}
-      <form className="form-container">
-        <input type="text" placeholder="Username" className="input-field" />
-        <input type="email" placeholder="Email Address" className="input-field" />
-        <input type="password" placeholder="Password" className="input-field" />
-        <input type="password" placeholder="Confirm Password" className="input-field" />
+      <form className={styles.formContainer}>
+        <input type="text" placeholder="Username" className={styles.inputField} />
+        <input type="email" placeholder="Email Address" className={styles.inputField} />
+        <input type="password" placeholder="Password" className={styles.inputField} />
+        <input type="password" placeholder="Confirm Password" className={styles.inputField} />
 
         {/* Кнопка регистрации */}
-        <button className="register-button">Register</button>
-      </form>
+        <button className={styles.registerButton}>Register</button>
+
 
       {/* Ссылка для входа */}
-      <p className="login-link">
+      <p className={styles.loginLink}>
         Already have an account?{' '}
-        <span className="link">Login</span>
+        <span className={styles.link}>Login</span>
       </p>
+      </form>
 
       {/* Нижняя часть экрана */}
-      <div className="footer">
+      <div className={styles.footer}>
       Built with ❤️ GreenField
       </div>
     </div>

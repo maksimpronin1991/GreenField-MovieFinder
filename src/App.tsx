@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import LoginScreen from './components/login-screen/loginScreen'
-import RegistrationScreen from './components/registration-screen/RegistrationScreen'
+import HomeScreen from './components/home-screen/homeScreen'
+import RegistrationScreen from './components/registration-screen/registrationScreen'
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LoginScreen/>} />
         <Route path='/registration' element={<RegistrationScreen/>} />
+        <Route path='/home' element={<HomeScreen/>}/>
       </Routes>
     </BrowserRouter>
 
