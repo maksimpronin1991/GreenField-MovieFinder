@@ -8,11 +8,11 @@
  .scrollingHeader {
   position: fixed;
   /* Фиксированное положение */
-  top: 50px;
+  top: 30px;
   left: 0;
   width: 100%;
   /* Занимает всю ширину экрана */
-  height: 150px;
+  height: 130px;
   /* Высота строки */
   overflow: hidden;
   /* Скрываем переполнение текста */

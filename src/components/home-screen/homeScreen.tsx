@@ -7,11 +7,11 @@ const HomeScreen: React.FC = () => {
 
             <div className={styles.topContainer}>
                 {/* Заголовок */}
-                <h1 className={styles.title}>The Movie Tracker</h1>
+                <h1 className={styles.title}>The<br />Movie<br /> Tracker</h1>
 
                 {/* Поисковая строка */}
                 <div className={styles.searchBar}>
-                    <input type="text" placeholder="Search a movie or a series" className={styles.searchInput}/>
+                    <input type="text" placeholder="Search a movie or a series" className={styles.searchInput} />
                 </div>
             </div>
 
@@ -21,7 +21,7 @@ const HomeScreen: React.FC = () => {
                     <h2 className={styles.sectionTitle}>Currently Watching</h2>
                     <div className={styles.movieGrid}>
                         <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                            <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
                         </div>
                         <div className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
@@ -51,32 +51,35 @@ const HomeScreen: React.FC = () => {
 
 
             {/* Секция Previously Watched */}
-            <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>Previously Watched</h2>
-                <div className={styles.movieGrid}>
-                    <div className={styles.movieCard}>
-                        <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+            <div className={styles.bottomContainer}>
+                <section className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Previously Watched</h2>
+                    <div className={styles.movieGrid}>
+                        <div className={styles.movieCard}>
+                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                        </div>
+                        <div className={styles.movieCard}>
+                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                        </div>
+                        <div className={styles.movieCard}>
+                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                        </div>
+                        <div className={styles.movieCard}>
+                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                        </div>
+                        <div className={styles.movieCard}>
+                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.title} />
+                        </div>
                     </div>
-                    <div className={styles.movieCard}>
-                        <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                    </div>
-                    <div className={styles.movieCard}>
-                        <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                    </div>
-                    <div className={styles.movieCard}>
-                        <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                    </div>
-                    <div className={styles.movieCard}>
-                        <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.title} />
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
             {/* Нижняя часть экрана */}
             <div className={styles.footer}>
                 Built with ❤️ by Elshazii
             </div>
         </div>
+
     );
 };
 

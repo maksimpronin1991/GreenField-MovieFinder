@@ -1,43 +1,64 @@
-
   .homeScreen {
+    max-width: 1280px;
+    height: 90vh;
+
     display: flex;
     flex-direction: column;
-    justify-content: s;
-    margin: 0 auto;
+    justify-content: space-between;
+    overflow: hidden;
+
+    padding: 40px 80px;
   }
 
   .topContainer{
+    width: 1280px;
+    max-height: 100px;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 200px;
+    justify-content: left;
+    align-items: center;
+
+    margin-bottom: 40px;
   }
   
   /* Заголовок */
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+
     font-weight: bold;
     color: #333;
+
     margin-bottom: 20px;
+    padding-right: 270px;
   }
   
   /* Поисковая строка */
   .searchBar {
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
   }
   
   .searchInput {
-    max-width: 400px;
+    width: 630px;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+    /* Секции */
   
-  /* Секции */
+  .middleContainer{
+    display: flex;
+    flex-direction: row;
+    max-height: 300px;
+    gap:166px
+  }
+
   .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     margin-bottom: 40px;
   }
   
@@ -56,6 +77,7 @@
   
   /* Картинки фильмов */
   .movieCard {
+    max-width: 20px;
     position: relative;
     overflow: hidden;
     border-radius: 5px;
