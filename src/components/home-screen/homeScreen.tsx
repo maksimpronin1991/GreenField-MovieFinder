@@ -16,15 +16,18 @@ const HomeScreen: React.FC = () => {
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
     ];
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // Количество видимых слайдов
+        slidesToShow: 6, // Количество видимых слайдов
         slidesToScroll: 1,
-  centerPadding: "60px", // Размер отступов по бокам
+        gap: "20px"
     };
 
 
@@ -80,13 +83,15 @@ const HomeScreen: React.FC = () => {
             <div className={styles.bottomContainer}>
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Previously Watched</h2>
-                        <Slider {...settings}>
-                            {moviePosters.map((poster, index) => (
-                                <div key={index} className={styles.movieCard}>
+                    <Slider {...settings}>
+                        {moviePosters.map((poster, index) => (
+                            <div key={index} className="slide-wrapper">
+                                <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                 </div>
-                            ))}
-                        </Slider>
+                            </div>
+                        ))}
+                    </Slider>
                 </section>
             </div>
 

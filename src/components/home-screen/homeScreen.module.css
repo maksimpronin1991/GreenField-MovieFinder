@@ -118,10 +118,10 @@
   color: #888;
 }
 
-.slick-slider {
-  margin: 0 -10px; /* Корректируем отступы для карусели */
+.slide-wrapper {
+  padding: 0 10px; /* Горизонтальные отступы */
 }
 
-.slick-slide {
-  padding: 0 10px; /* Добавляем отступы для каждого слайда */
+.slick-list {
+  margin: 0 -10px; /* Компенсируем отступы */
 }
