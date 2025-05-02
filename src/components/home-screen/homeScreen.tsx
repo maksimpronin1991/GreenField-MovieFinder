@@ -1,7 +1,33 @@
 import React from 'react';
 import styles from './homeScreen.module.css'
+import Slider from 'react-slick';
+
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomeScreen: React.FC = () => {
+    const moviePosters = [
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+    ];
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4, // Количество видимых слайдов
+        slidesToScroll: 1,
+  centerPadding: "60px", // Размер отступов по бокам
+    };
+
+
     return (
         <div className={styles.homeScreen}>
 
@@ -19,12 +45,12 @@ const HomeScreen: React.FC = () => {
                 {/* Секция Currently Watching */}
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Currently Watching</h2>
-                    <div className={styles.movieGrid}>
+                    <div className={styles.middleMovieContainer}>
                         <div className={styles.movieCard}>
                             <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
                         </div>
                         <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
+                            <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
                         </div>
                     </div>
                 </section>
@@ -32,7 +58,7 @@ const HomeScreen: React.FC = () => {
                 {/* Секция Suggested To Watch */}
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Suggested To Watch</h2>
-                    <div className={styles.movieGrid}>
+                    <div className={styles.middleMovieContainer}>
                         <div className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
@@ -54,29 +80,19 @@ const HomeScreen: React.FC = () => {
             <div className={styles.bottomContainer}>
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Previously Watched</h2>
-                    <div className={styles.movieGrid}>
-                        <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
-                        <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
-                        <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
-                        <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
-                        <div className={styles.movieCard}>
-                            <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.title} />
-                        </div>
-                    </div>
+                        <Slider {...settings}>
+                            {moviePosters.map((poster, index) => (
+                                <div key={index} className={styles.movieCard}>
+                                    <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
+                                </div>
+                            ))}
+                        </Slider>
                 </section>
             </div>
 
             {/* Нижняя часть экрана */}
             <div className={styles.footer}>
-                Built with ❤️ by Elshazii
+                Built with ❤️ by GreenField
             </div>
         </div>
 

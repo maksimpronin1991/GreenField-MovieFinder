@@ -1,115 +1,127 @@
-  .homeScreen {
-    max-width: 1280px;
-    height: 90vh;
+/* Главный контейнер */
+.homeScreen {
+  max-width: 1280px;
+  height: 90vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Элементы располагаются по вертикали */
+  justify-content: space-between; /* Распределение пространства между элементами */
+  overflow: hidden; /* Скрываем переполнение */
 
-    padding: 40px 80px;
-  }
+  padding: 40px 80px; /* Отступы внутри контейнера */
+}
 
-  .topContainer{
-    width: 1280px;
-    max-height: 100px;
+/* Верхний контейнер (заголовок и поисковая строка) */
+.topContainer {
+  width: 100%;
+  max-height: 100px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+  display: flex;
+  flex-direction: row; /* Элементы располагаются по горизонтали */
+  justify-content: space-between; /* Заголовок слева, поисковая строка справа */
+  align-items: center; /* Выравнивание по центру по вертикали */
 
-    margin-bottom: 40px;
-  }
-  
-  /* Заголовок */
-  .title {
-    font-size: 1.5rem;
+  margin-bottom: 40px; /* Отступ снизу */
+}
 
-    font-weight: bold;
-    color: #333;
+/* Заголовок */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 
-    margin-bottom: 20px;
-    padding-right: 270px;
-  }
-  
-  /* Поисковая строка */
-  .searchBar {
-    margin-bottom: 20px;
-  }
-  
-  .searchInput {
-    width: 630px;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  margin-bottom: 20px;
+}
 
-    /* Секции */
-  
-  .middleContainer{
-    display: flex;
-    flex-direction: row;
-    max-height: 300px;
-    gap:166px
-  }
+/* Поисковая строка */
+.searchBar {
+  margin-bottom: 20px;
+}
 
-  .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin-bottom: 40px;
-  }
-  
-  .sectionTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Грид с фильмами */
-  .movieGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Картинки фильмов */
-  .movieCard {
-    max-width: 20px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .moviePoster {
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .movieCard:hover .moviePoster {
-    transform: scale(1.1); /* Увеличение при наведении */
-  }
-  
-  .rating {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    padding: 2px 5px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-  }
-  
-  /* Нижняя часть экрана */
-  .footer {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    color: #888;
-  }
+.searchInput {
+  width: 630px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+}
+
+/* Центральный контейнер (секции фильмов) */
+.middleContainer {
+  display: flex;
+  flex-direction: row; /* Элементы располагаются по горизонтали */
+  gap: 166px; /* Расстояние между секциями */
+}
+
+/* Секции */
+.section {
+  display: flex;
+  flex-direction: column; /* Элементы располагаются по вертикали */
+  justify-content: start; /* Выравнивание по началу */
+  margin-bottom: 40px; /* Отступ снизу */
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px; /* Отступ перед списком фильмов */
+}
+
+/* Контейнеры для фильмов */
+.middleMovieContainer,
+.bottomMovieContainer {
+  display: flex;
+  flex-direction: row; /* Фильмы располагаются по горизонтали */
+  gap: 20px; /* Расстояние между фильмами */
+}
+
+/* Карточки фильмов */
+.movieCard {
+  width: 180px;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+  background-color: black; /* Фон карточки */
+}
+
+.moviePoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Изображение заполняет карточку */
+  transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.movieCard:hover .moviePoster {
+  transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.rating {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Нижняя часть экрана */
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.slick-slider {
+  margin: 0 -10px; /* Корректируем отступы для карусели */
+}
+
+.slick-slide {
+  padding: 0 10px; /* Добавляем отступы для каждого слайда */
+}
