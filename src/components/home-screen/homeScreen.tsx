@@ -19,6 +19,17 @@ const HomeScreen: React.FC = () => {
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
     ];
 
     const settings = {
@@ -27,7 +38,6 @@ const HomeScreen: React.FC = () => {
         speed: 500,
         slidesToShow: 6, // Количество видимых слайдов
         slidesToScroll: 1,
-        gap: "20px"
     };
 
 
@@ -42,6 +52,13 @@ const HomeScreen: React.FC = () => {
                 <div className={styles.searchBar}>
                     <input type="text" placeholder="Search a movie or a series" className={styles.searchInput} />
                 </div>
+                <nav className={styles.navigation}>
+                    <ul className={styles.navigationList}>
+                        <li className="navigationItem"><a href="" className="navugationLink">Home</a></li>
+                        <li className="navigationItem"><a href="" className="navugationLink">All Movie</a></li>
+                        <li className="navigationItem"><a href="" className="navugationLink">Log out</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div className={styles.middleContainer}>

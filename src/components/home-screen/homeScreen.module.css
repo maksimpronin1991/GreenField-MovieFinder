@@ -38,12 +38,26 @@
   margin-bottom: 20px;
 }
 
+.navigation{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.navigationList{
+  display: flex;
+  flex-direction: column;
+  gap:5px
+}
+
 .searchInput {
   width: 630px;
   padding: 10px;
   border: none;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+  text-align: center;
 }
 
 /* Центральный контейнер (секции фильмов) */
@@ -116,12 +130,4 @@
   transform: translateX(-50%);
   font-size: 0.8rem;
   color: #888;
-}
-
-.slide-wrapper {
-  padding: 0 10px; /* Горизонтальные отступы */
-}
-
-.slick-list {
-  margin: 0 -10px; /* Компенсируем отступы */
 }
