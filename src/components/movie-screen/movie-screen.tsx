@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './movie-screen.css'
+import styles from '../movie-screen/movie-screen.module.css'
 import Slider from 'react-slick';
 
 
@@ -65,25 +65,25 @@ const MovieScreen: React.FC = () => {
                 {/* Секция Currently Watching */}
                 <section className={styles.infoSection}>
                     <div className={styles.infoLeft}>
-                        <h2 className="movieTitle"></h2>
-                        <div className="movieInfo">
-                            <img className='movieImg' src="" alt="" />
-                            <div className="movieText">
-                                <div className="movieTypeContainer">
-                                    <p className="movieType">Action</p>
-                                    <p className="movieType">Sci-Fi</p>
+                        <h2 className={styles.movieTitle}>The Gray Man</h2>
+                        <div className={styles.movieInfo}>
+                            <img className={styles.movieImg} src="./src/img/Rectangle 39.jpg" alt="" />
+                            <div className={styles.movieText}>
+                                <div className={styles.movieTypeContainer}>
+                                    <p className={styles.movieType}>Action</p>
+                                    <p className={styles.movieType}>Sci-Fi</p>
                                 </div>
-                                <p className="movieDescription">A thief who steals corporate secrets through 
-                                    the use of dream-sharing technology is given the inverse task of planting 
+                                <p className="movieDescription">A thief who steals corporate secrets through
+                                    the use of dream-sharing technology is given the inverse task of planting
                                     an idea into the mind of a C.E.O., but his tragic past may doom the project
-                                     and his team to disaster.</p>
-                            </div>
-                            <div className="movieRatingContainer">
-                                <div className="imbdRating">
-                                    <p className='imbdRatingTitle'>IMDB Rating</p>
-                                    <p className="imbdRatingNumber"><span>star</span><span>number</span>/10</p>
+                                    and his team to disaster.</p>
+                                <div className="movieRatingContainer">
+                                    <div className="imbdRating">
+                                        <p className='imbdRatingTitle'>IMDB Rating</p>
+                                        <p className="imbdRatingNumber"><span>star</span><span>number</span>/10</p>
+                                    </div>
+                                    <p className='reviewsCount'><span></span>k Reviews</p>
                                 </div>
-                                <p className='reviewsCount'><span></span>k Reviews</p>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,6 @@ const MovieScreen: React.FC = () => {
                         <button className='addToWathBtn'>Add to watchlist</button>
                         <video className='trailer' src=""></video>
                     </div>
-
                 </section>
             </div>
 

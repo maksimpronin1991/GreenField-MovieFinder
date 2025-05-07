@@ -1,0 +1,119 @@
+.movieScreen {
+    max-width: 1280px;
+    height: 90vh;
+  
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    overflow: hidden; 
+  
+    padding: 40px 80px;
+  }
+  
+
+  .topContainer {
+    width: 100%;
+    max-height: 100px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+  
+    margin-bottom: 40px; 
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  
+    margin-bottom: 20px;
+  }
+  
+
+  .searchBar {
+    margin-bottom: 20px;
+  }
+  
+  .navigation{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .navigationList{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+  }
+  
+  .searchInput {
+    width: 630px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+    text-align: center;
+  }
+
+
+
+  .infoSection{
+    max-height: 370px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+  }
+
+  .infoLeft{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movieInfo{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .movieTitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .movieImg{
+    min-width: 180px;
+    min-height: 260px;
+    width: 180px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: black;
+    object-fit: cover;
+  }
+
+  .movieText{
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+.movieTypeContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.movieType{
+  border: #333 1px solid;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+  
