@@ -77,7 +77,7 @@ const MovieScreen: React.FC = () => {
                                     the use of dream-sharing technology is given the inverse task of planting
                                     an idea into the mind of a C.E.O., but his tragic past may doom the project
                                     and his team to disaster.</p>
-                                <div className="movieRatingContainer">
+                                <div className={styles.movieRatingContainer}>
                                     <div className="imbdRating">
                                         <p className='imbdRatingTitle'>IMDB Rating</p>
                                         <p className="imbdRatingNumber"><span>star</span><span>number</span>/10</p>
