@@ -78,9 +78,9 @@ const MovieScreen: React.FC = () => {
                                     an idea into the mind of a C.E.O., but his tragic past may doom the project
                                     and his team to disaster.</p>
                                 <div className={styles.movieRatingContainer}>
-                                    <div className="imbdRating">
-                                        <p className='imbdRatingTitle'>IMDB Rating</p>
-                                        <p className="imbdRatingNumber"><span>star</span><span>number</span>/10</p>
+                                    <div className={styles.imbdRating}>
+                                        <p className={styles.imbdRatingTitle}>IMDB Rating</p>
+                                        <p className="imbdRatingNumber"><span className={styles.star}></span><span>number</span>/10</p>
                                     </div>
                                     <p className='reviewsCount'><span></span>k Reviews</p>
                                 </div>

@@ -123,3 +123,16 @@
   gap:20px;
   align-items: center;
 }
+
+.imbdRating{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.imbdRatingTitle{
+  font-size: 1.7rem;
+  font-style: bold;
+}
