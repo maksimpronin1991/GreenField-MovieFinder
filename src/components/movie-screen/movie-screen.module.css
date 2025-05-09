@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center; 
   
-    margin-bottom: 40px; 
+    margin-bottom: 20px; 
   }
 
   .title {
@@ -28,7 +28,7 @@
     font-weight: bold;
     color: #333;
   
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
 
@@ -59,18 +59,18 @@
   }
 
 
-
   .infoSection{
-    max-height: 370px;
-
+    max-height: 363px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;    
+    margin-bottom: 80px;
   }
 
   .infoLeft{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .movieInfo{
@@ -85,10 +85,10 @@
   }
 
   .movieImg{
-    min-width: 180px;
-    min-height: 260px;
-    width: 180px;
-    height: 260px;
+    min-width: 190px;
+    min-height: 290px;
+    width: 190px;
+
     position: relative;
     overflow: hidden;
     border-radius: 5px;
@@ -120,7 +120,7 @@
 .movieRatingContainer{
   display: flex;
   flex-direction: row;
-  gap:20px;
+  gap:25px;
   align-items: center;
 }
 
@@ -131,8 +131,57 @@
   gap: 5px;
 }
 
+.imbdRatingNumber::before{
+    content: "";
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gold"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    background-repeat: no-repeat;
+    margin-right: 10px; 
+    vertical-align:text-bottom; 
+    animation: blink 2s infinite;
+}
+
+p + .imbdRatingNumber, .reviewsCount {
+  color:#636363;
+}
+
+@keyframes blink {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.ratingNumberBold{
+  font-size: 1.6rem;
+  font-style: bold;
+  color: black;
+}
 
 .imbdRatingTitle{
   font-size: 1.7rem;
   font-style: bold;
+}
+
+.infoRight{
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  gap:28px;
+  align-items:end;
+}
+
+.trailer{
+  width: 520px;
+  height: 291px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.addToWathBtn{
+  background-color: #D9D9D9;
+  padding: 12px 30px;
+  border-radius: 20px;
 }

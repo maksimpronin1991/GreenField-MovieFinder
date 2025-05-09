@@ -80,16 +80,35 @@ const MovieScreen: React.FC = () => {
                                 <div className={styles.movieRatingContainer}>
                                     <div className={styles.imbdRating}>
                                         <p className={styles.imbdRatingTitle}>IMDB Rating</p>
-                                        <p className="imbdRatingNumber"><span className={styles.star}></span><span>number</span>/10</p>
+                                        <p className={styles.imbdRatingNumber}><span className={styles.ratingNumberBold}>7</span>/10</p>
                                     </div>
-                                    <p className='reviewsCount'><span></span>k Reviews</p>
+                                    <p className={styles.reviewsCount}>10k Reviews</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className={styles.infoRight}>
-                        <button className='addToWathBtn'>Add to watchlist</button>
-                        <video className='trailer' src=""></video>
+                        <button className={styles.addToWathBtn}>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none" 
+                                stroke="currentColor" 
+                                strokeWidth="2.5"  
+                                style={{
+                                    marginRight: '8px',
+                                    verticalAlign: 'text-bottom',  
+                                }}
+                            >
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+                            </svg>
+                            Add to watchlist
+                        </button>
+                        <video className={styles.trailer} controls>
+                            <source src="/videos/trailer.mp4" type="video/mp4" />
+                            Ваш браузер не поддерживает видео.
+                        </video>
                     </div>
                 </section>
             </div>
