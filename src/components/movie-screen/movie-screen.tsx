@@ -12,31 +12,13 @@ const MovieScreen: React.FC = () => {
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
-        "src/img/Rectangle 39.jpg",
     ];
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6, // Количество видимых слайдов
+        slidesToShow: 4, // Количество видимых слайдов
         slidesToScroll: 1,
     };
 
@@ -93,12 +75,12 @@ const MovieScreen: React.FC = () => {
                                 width="20"
                                 height="20"
                                 viewBox="0 0 24 24"
-                                fill="none" 
-                                stroke="currentColor" 
-                                strokeWidth="2.5"  
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
                                 style={{
                                     marginRight: '8px',
-                                    verticalAlign: 'text-bottom',  
+                                    verticalAlign: 'text-bottom',
                                 }}
                             >
                                 <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
@@ -117,6 +99,15 @@ const MovieScreen: React.FC = () => {
             {/* Секция Previously Watched */}
             <div className={styles.bottomContainer}>
                 <section className={styles.partsSection}>
+                    <div className={styles.seasons}>
+                        <h3 className={styles.seasonsTitle}>Seasons</h3>
+                        <div className={styles.seasosButtons}>
+                            <button className={styles.seasosButton}>1</button>
+                            <button className={styles.seasosButton}>2</button>
+                            <button className={styles.seasosButton}>3</button>
+                            <button className={styles.seasosButton}>4</button>
+                        </div>
+                    </div>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
                             <div key={index} className="slide-wrapper">
