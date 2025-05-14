@@ -102,7 +102,7 @@ const HomeScreen: React.FC = () => {
                     <h2 className={styles.sectionTitle}>Previously Watched</h2>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <div key={index} className="slide-wrapper">
+                            <div key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                 </div>

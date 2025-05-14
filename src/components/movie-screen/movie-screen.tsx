@@ -110,10 +110,10 @@ const MovieScreen: React.FC = () => {
                     </div>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <div key={index} className="slide-wrapper">
+                            <div key={index}>
                                 <div className={styles.partCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
-                                    <p className="partDescription"></p>
+                                    <p className={styles.partDescription}>Part 1</p>
                                 </div>
                             </div>
                         ))}

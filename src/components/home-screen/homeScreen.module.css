@@ -1,7 +1,7 @@
 /* Главный контейнер */
 .homeScreen {
   max-width: 1280px;
-  height: 90vh;
+  height: 95vh;
 
   display: flex;
   flex-direction: column; /* Элементы располагаются по вертикали */
@@ -21,7 +21,6 @@
   justify-content: space-between; /* Заголовок слева, поисковая строка справа */
   align-items: center; /* Выравнивание по центру по вертикали */
 
-  margin-bottom: 40px; /* Отступ снизу */
 }
 
 /* Заголовок */

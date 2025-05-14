@@ -1,222 +1,269 @@
 .movieScreen {
-    max-width: 1280px;
-    height: 90vh;
-  
-    display: flex;
-    flex-direction: column; 
-    justify-content:top; 
-    overflow: hidden; 
-  
-    padding: 40px 80px;
-  }
-  
+  max-width: 1280px;
+  height: 95vh;
 
-  .topContainer {
-    width: 100%;
-    max-height: 100px;
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
-  
-    margin-bottom: 30px; 
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  overflow: hidden;
 
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  
-    margin-bottom: 10px;
-  }
-  
-
-  .searchBar {
-    margin-bottom: 20px;
-  }
-  
-  .navigation{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .navigationList{
-    display: flex;
-    flex-direction: column;
-    gap:5px
-  }
-  
-  .searchInput {
-    width: 630px;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
-    text-align: center;
-  }
+  padding: 40px 80px;
+}
 
 
-  .infoSection{
-    max-height: 360px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;    
-    margin-bottom: 40px;
-  }
+.topContainer {
+  width: 100%;
+  max-height: 100px;
 
-  .infoLeft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  .movieInfo{
-    display: flex;
-    flex-direction: row;
-  }
+  margin-bottom: 20px;
+}
 
-  .movieTitle{
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 
-  .movieImg{
-    min-width: 190px;
-    min-height: 290px;
-    width: 190px;
+  margin-bottom: 10px;
+}
 
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    background-color: black;
-    object-fit: cover;
-  }
 
-  .movieText{
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-  }
+.searchBar {
+  margin-bottom: 20px;
+}
 
-.movieTypeContainer{
+.navigation {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.searchInput {
+  width: 630px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Тень для визуального эффекта */
+  text-align: center;
+}
+
+
+.infoSection {
+  max-height: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.infoLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.movieTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.movieImg {
+  max-width: 190px;
+  min-height: 290px;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  object-fit: cover;
+}
+
+.movieText {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.movieTypeContainer {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-.movieType{
+.movieType {
   border: #333 1px solid;
   border-radius: 30px;
   padding: 5px 10px;
 }
 
-.movieRatingContainer{
+.movieRatingContainer {
   display: flex;
   flex-direction: row;
-  gap:25px;
+  gap: 25px;
   align-items: center;
 }
 
-.imbdRating{
+.imbdRating {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 
-.imbdRatingNumber::before{
-    content: "";
-    display: inline-block;
-    width: 20px; 
-    height: 20px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gold"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
-    background-repeat: no-repeat;
-    margin-right: 10px; 
-    vertical-align:text-bottom; 
-    animation: blink 2s infinite;
+.imbdRatingNumber::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gold"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: text-bottom;
+  animation: blink 2s infinite;
 }
 
-p + .imbdRatingNumber, .reviewsCount {
-  color:#636363;
+p+.imbdRatingNumber,
+.reviewsCount {
+  color: #636363;
 }
 
 @keyframes blink {
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.3; }
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
 }
 
-.ratingNumberBold{
+.ratingNumberBold {
   font-size: 1.6rem;
   font-style: bold;
   color: black;
 }
 
-.imbdRatingTitle{
+.imbdRatingTitle {
   font-size: 1.7rem;
   font-style: bold;
 }
 
-.infoRight{
+.infoRight {
   max-width: 550px;
 
   display: flex;
   flex-direction: column;
-  gap:28px;
-  align-items:end;
+  gap: 28px;
+  align-items: end;
 }
 
-.trailer{
+.trailer {
   width: 520px;
   height: 291px;
   background-color: black;
   border-radius: 20px;
 }
 
-.addToWathBtn{
+.addToWathBtn {
   background-color: #D9D9D9;
   padding: 12px 30px;
   border-radius: 20px;
 }
 
-.bottomContainer{
+.bottomContainer {
   max-height: 280px;
+  padding-bottom: 20px;
 }
 
-.partsSection{
+.partsSection {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
 }
 
-.seasons{
+.seasons {
   display: flex;
   flex-direction: row;
-  gap:30px;
+  gap: 30px;
   font-weight: bold;
-  align-items:center;
-
+  align-items: center;
 }
 
-.seasonsTitle{
-  font-size: 30px;
+.seasonsTitle {
+  font-size: 1.5rem;
 }
 
-.seasosButtons{
+.seasosButtons {
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
 }
 
-.seasosButton{
+.seasosButton {
   background-color: #D9D9D9;
-  padding: 12px 15px;
+  padding: 8px 12px;
   border-radius: 10px;
+}
+
+
+.partCard {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Тень для визуального эффекта */
+  background-color: white;
+  /* Фон карточки */
+}
+
+.moviePoster {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  /* Изображение заполняет карточку */
+  transition: transform 0.3s ease;
+  /* Плавное увеличение при наведении */
+}
+
+.partDescription {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #888;
 }
