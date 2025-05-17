@@ -4,11 +4,15 @@
   height: 95vh;
 
   display: flex;
-  flex-direction: column; /* Элементы располагаются по вертикали */
-  justify-content: top; /* Распределение пространства между элементами */
-  overflow: hidden; /* Скрываем переполнение */
+  flex-direction: column;
+  /* Элементы располагаются по вертикали */
+  justify-content: top;
+  /* Распределение пространства между элементами */
+  overflow: hidden;
+  /* Скрываем переполнение */
 
-  padding: 40px 80px; /* Отступы внутри контейнера */
+  padding: 40px 80px;
+  /* Отступы внутри контейнера */
 }
 
 /* Верхний контейнер (заголовок и поисковая строка) */
@@ -17,9 +21,12 @@
   max-height: 100px;
 
   display: flex;
-  flex-direction: row; /* Элементы располагаются по горизонтали */
-  justify-content: space-between; /* Заголовок слева, поисковая строка справа */
-  align-items: center; /* Выравнивание по центру по вертикали */
+  flex-direction: row;
+  /* Элементы располагаются по горизонтали */
+  justify-content: space-between;
+  /* Заголовок слева, поисковая строка справа */
+  align-items: center;
+  /* Выравнивание по центру по вертикали */
 
 }
 
@@ -37,17 +44,17 @@
   margin-bottom: 20px;
 }
 
-.navigation{
+.navigation {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
 
-.navigationList{
+.navigationList {
   display: flex;
   flex-direction: column;
-  gap:5px
+  gap: 5px
 }
 
 .searchInput {
@@ -55,15 +62,77 @@
   padding: 10px;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Тень для визуального эффекта */
   text-align: center;
+}
+
+
+.sortContainer{
+  margin-bottom: 20px;
+}
+
+.sortOptions{
+  font-weight: bold;
 }
 
 
 
 
 
+.movieCard {
+  width: 190px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Тень для визуального эффекта */
+  background-color: black;
+  /* Фон карточки */
+  margin-bottom: 20px;
+}
 
+.moviePoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Изображение заполняет карточку */
+  transition: transform 0.3s ease;
+  /* Плавное увеличение при наведении */
+}
+
+.movieCard:hover .moviePoster {
+  transform: scale(1.1);
+  /* Увеличение изображения при наведении */
+}
+
+.cardRating {
+  position: absolute;
+  top: 5px;
+  left:  5px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cardRating::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gold"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+p+.cardRating,
+.reviewsCount {
+  color: #636363;
+}
 
 
 

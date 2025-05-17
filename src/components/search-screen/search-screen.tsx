@@ -30,14 +30,39 @@ const SearchScreen: React.FC = () => {
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
+        "src/img/Rectangle 39.jpg",
     ];
 
     const settings = {
-        dots: false,
         infinite: true,
-        speed: 500,
-        slidesToShow: 6, // Количество видимых слайдов
+        slidesToShow: 1,
         slidesToScroll: 1,
+        vertical: true,
+        verticalSwiping: true,
+        swipeToSlide: true,
+        rows: 3,
+        slidesPerRow: 6,
     };
 
 
@@ -64,9 +89,9 @@ const SearchScreen: React.FC = () => {
             {/* Секция Previously Watched */}
             <div className={styles.bottomContainer}>
                 <section className={styles.section}>
-                    <div className="sortContainer">
-                        <label htmlFor="sort-options">sort by:</label>
-                        <select id="sort-options">
+                    <div className={styles.sortContainer}>
+                        <label className={styles.sortOptions} htmlFor="sortOptions">Showing search results for </label>
+                        <select id="sortOptions">
                             <option value="premier-date">premier-date</option>
                             <option value="IMDB Rating">IMDB Rating</option>
                             <option value="numerical">number of views</option>
@@ -77,6 +102,7 @@ const SearchScreen: React.FC = () => {
                             <div key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
+                                    <div className={styles.cardRating}>8</div>
                                 </div>
                             </div>
                         ))}
@@ -84,10 +110,6 @@ const SearchScreen: React.FC = () => {
                 </section>
             </div>
 
-            {/* Нижняя часть экрана */}
-            <div className={styles.footer}>
-                Built with ❤️ by GreenField
-            </div>
         </div>
 
     );
