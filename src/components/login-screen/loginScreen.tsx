@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./loginScreen.module.css"
+import { Link } from 'react-router-dom';
 
 const LoginScreen: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const LoginScreen: React.FC = () => {
         <button className={styles.loginButton}>Login</button>
         <p className={styles.signupText}>
           You don’t have an account?{' '}
-          <span className={styles.signupLink}>SignUp</span>
+          <Link to="/registration" className={styles.signupLink}>SignUp</Link>
         </p>
       </form>
 

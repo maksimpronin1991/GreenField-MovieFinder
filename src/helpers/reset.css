@@ -48,7 +48,7 @@ table {
     border-spacing: 0;
 }
 
-button, input, optgroup, select, textarea {
+button, input, optgroup, select, textarea,Link {
     margin: 0;
     padding: 0;
     border: 0;

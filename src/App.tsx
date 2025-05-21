@@ -16,7 +16,6 @@ function App() {
         <Route path='/home' element={<HomeScreen/>}/>
         <Route path='/movieScreen' element={<MovieScreen/>}/>
         <Route path='/searchScreen' element={<SearchScreen/>}/>
-        
       </Routes>
     </BrowserRouter>
 
