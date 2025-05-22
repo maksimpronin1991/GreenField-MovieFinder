@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 const HomeScreen: React.FC = () => {
     const moviePosters = [
@@ -54,9 +55,8 @@ const HomeScreen: React.FC = () => {
                 </div>
                 <nav className={styles.navigation}>
                     <ul className={styles.navigationList}>
-                        <li className="navigationItem"><a href="" className="navugationLink">Home</a></li>
-                        <li className="navigationItem"><a href="" className="navugationLink">All Movie</a></li>
-                        <li className="navigationItem"><a href="" className="navugationLink">Log out</a></li>
+                        <li className="navigationItem"><Link to="/searchScreen" className="navugationLink">All Movie</Link></li>
+                        <li className="navigationItem"><Link to="/" className="navugationLink">Log out</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -66,12 +66,12 @@ const HomeScreen: React.FC = () => {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Currently Watching</h2>
                     <div className={styles.middleMovieContainer}>
-                        <div className={styles.movieCard}>
+                        <Link to="/movieScreen" className={styles.movieCard}>
                             <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
-                        <div className={styles.movieCard}>
+                        </Link>
+                        <Link to="/movieScreen"  className={styles.movieCard}>
                             <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
-                        </div>
+                        </Link>
                     </div>
                 </section>
 
@@ -79,18 +79,18 @@ const HomeScreen: React.FC = () => {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Suggested To Watch</h2>
                     <div className={styles.middleMovieContainer}>
-                        <div className={styles.movieCard}>
+                        <Link to="/movieScreen"  className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
-                        </div>
-                        <div className={styles.movieCard}>
+                        </Link>
+                        <Link  to="/movieScreen" className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
-                        </div>
-                        <div className={styles.movieCard}>
+                        </Link>
+                        <Link  to="/movieScreen" className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
-                        </div>
+                        </Link>
                     </div>
                 </section>
             </div>
@@ -102,11 +102,11 @@ const HomeScreen: React.FC = () => {
                     <h2 className={styles.sectionTitle}>Previously Watched</h2>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <div key={index}>
+                            <Link to="/movieScreen"  key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </Slider>
                 </section>

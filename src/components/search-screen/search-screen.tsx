@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 const SearchScreen: React.FC = () => {
     const moviePosters = [
@@ -79,9 +80,8 @@ const SearchScreen: React.FC = () => {
                 </div>
                 <nav className={styles.navigation}>
                     <ul className={styles.navigationList}>
-                        <li className="navigationItem"><a href="" className="navugationLink">Home</a></li>
-                        <li className="navigationItem"><a href="" className="navugationLink">All Movie</a></li>
-                        <li className="navigationItem"><a href="" className="navugationLink">Log out</a></li>
+                        <li className="navigationItem"><Link to="/home" className="navugationLink">Home</Link></li>
+                        <li className="navigationItem"><Link to="/" className="navugationLink">Log out</Link></li>
                     </ul>
                 </nav>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./registrationScreen.module.css"
+import { Link } from 'react-router-dom';
 
 const RegistrationScreen: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const RegistrationScreen: React.FC = () => {
       {/* Ссылка для входа */}
       <p className={styles.loginLink}>
         Already have an account?{' '}
-        <span className={styles.link}>Login</span>
+        <Link to="/" className={styles.link}>Login</Link>
       </p>
       </form>
 
