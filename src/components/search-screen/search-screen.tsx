@@ -99,12 +99,12 @@ const SearchScreen: React.FC = () => {
                     </div>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <div key={index}>
+                            <Link to="/movieScreen" key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                     <div className={styles.cardRating}>8</div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </Slider>
                 </section>
