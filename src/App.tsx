@@ -5,6 +5,7 @@ import RegistrationScreen from './components/registration-screen/registrationScr
 import MovieScreen from './components/movie-screen/movie-screen'
 import SearchScreen from './components/search-screen/search-screen'
 import ErrorScreen from './components/error-screen/errorScreen'
+import { AppRoute } from './const'
 
 function App() {
 
@@ -12,13 +13,12 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<LoginScreen />} />
-        <Route path='/registration' element={<RegistrationScreen />} />
-        <Route path='/home' element={<HomeScreen />} />
-        <Route path='/movieScreen/:movieId' element={<MovieScreen />} />
-        <Route path='/searchScreen' element={<SearchScreen />} />
+        <Route path={AppRoute.Login} element={<LoginScreen />} />
+        <Route path={AppRoute.Registration} element={<RegistrationScreen />} />
+        <Route path={AppRoute.Home} element={<HomeScreen />} />
+        <Route path={AppRoute.MovieScreen} element={<MovieScreen />} />
+        <Route path={AppRoute.SearchScreen} element={<SearchScreen />} />
         <Route path='*' element={<ErrorScreen />} />
-
       </Routes>
     </BrowserRouter>
 
