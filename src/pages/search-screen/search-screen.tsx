@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
+import Header from '../../components/header/header';
 
 const SearchScreen = () => {
     const moviePosters = [
@@ -69,21 +70,7 @@ const SearchScreen = () => {
     return (
         <div className={styles.searchScreen}>
 
-            <div className={styles.topContainer}>
-                {/* Заголовок */}
-                <h1 className={styles.title}>The<br />Movie<br /> Tracker</h1>
-
-                {/* Поисковая строка */}
-                <div className={styles.searchBar}>
-                    <input type="text" placeholder="Search a movie or a series" className={styles.searchInput} />
-                </div>
-                <nav className={styles.navigation}>
-                    <ul className={styles.navigationList}>
-                        <li className="navigationItem"><Link to="/home" className="navugationLink">Home</Link></li>
-                        <li className="navigationItem"><Link to="/" className="navugationLink">Log out</Link></li>
-                    </ul>
-                </nav>
-            </div>
+            <Header/>
 
             {/* Секция Previously Watched */}
             <div className={styles.bottomContainer}>

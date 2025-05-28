@@ -14,6 +14,7 @@ const Header = () => {
             <nav className={styles.navigation}>
                 <ul className={styles.navigationList}>
                     <li className="navigationItem"><Link to="/searchScreen" className="navugationLink">All Movie</Link></li>
+                    <li className="navigationItem"><Link to="/home" className="navugationLink">Home</Link></li>
                     <li className="navigationItem"><Link to="/" className="navugationLink">Log out</Link></li>
                 </ul>
             </nav>
