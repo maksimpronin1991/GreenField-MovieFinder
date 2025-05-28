@@ -1,8 +1,7 @@
-import React from 'react';
 import styles from "./registrationScreen.module.css"
 import { Link } from 'react-router-dom';
 
-const RegistrationScreen: React.FC = () => {
+const RegistrationScreen = () => {
   return (
     <div className={styles.registration}>
       {/* Бегущая строка во весь экран */}

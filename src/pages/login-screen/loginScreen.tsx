@@ -1,8 +1,7 @@
-import React from 'react';
 import styles from "./loginScreen.module.css"
 import { Link } from 'react-router-dom';
 
-const LoginScreen: React.FC = () => {
+const LoginScreen = () => {
   return (
     <div className={styles.loginScreen}>
       {/* Бегущая строка во весь экран */}

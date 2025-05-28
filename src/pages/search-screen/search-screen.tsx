@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './search-screen.module.css'
 import Slider from 'react-slick';
 
@@ -7,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 
-const SearchScreen: React.FC = () => {
+const SearchScreen = () => {
     const moviePosters = [
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",

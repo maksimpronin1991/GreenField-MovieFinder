@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ErrorScreen.module.css";
 
@@ -8,11 +7,11 @@ interface ErrorScreenProps {
   showActions?: boolean;
 }
 
-const ErrorScreen: React.FC<ErrorScreenProps> = ({
+const ErrorScreen = ({
   errorCode = 404,
   errorMessage = "Something went wrong. The page you're looking for doesn't exist or an error occurred.",
   showActions = true,
-}) => {
+}:ErrorScreenProps) => {
   const navigate = useNavigate();
 
   const getErrorTitle = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../movie-screen/movie-screen.module.css'
 import Slider from 'react-slick';
 
@@ -7,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useParams } from 'react-router-dom';
 
-const MovieScreen: React.FC = () => {
+const MovieScreen = () => {
 const params = useParams();
 
 console.log(params)
