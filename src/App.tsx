@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import LoginScreen from './components/login-screen/loginScreen'
-import HomeScreen from './components/home-screen/homeScreen'
-import RegistrationScreen from './components/registration-screen/registrationScreen'
-import MovieScreen from './components/movie-screen/movie-screen'
-import SearchScreen from './components/search-screen/search-screen'
-import ErrorScreen from './components/error-screen/errorScreen'
+import LoginScreen from './pages/login-screen/loginScreen'
+import HomeScreen from './pages/home-screen/homeScreen'
+import RegistrationScreen from './pages/registration-screen/registrationScreen'
+import MovieScreen from './pages/movie-screen/movie-screen'
+import SearchScreen from './pages/search-screen/search-screen'
+import ErrorScreen from './pages/error-screen/errorScreen'
 import { AppRoute } from './const'
 
 function App() {

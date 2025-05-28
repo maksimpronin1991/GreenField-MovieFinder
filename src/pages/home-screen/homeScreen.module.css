@@ -11,53 +11,6 @@
   padding: 40px 80px; /* Отступы внутри контейнера */
 }
 
-/* Верхний контейнер (заголовок и поисковая строка) */
-.topContainer {
-  width: 100%;
-  max-height: 100px;
-
-  display: flex;
-  flex-direction: row; /* Элементы располагаются по горизонтали */
-  justify-content: space-between; /* Заголовок слева, поисковая строка справа */
-  align-items: center; /* Выравнивание по центру по вертикали */
-
-}
-
-/* Заголовок */
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-
-  margin-bottom: 20px;
-}
-
-/* Поисковая строка */
-.searchBar {
-  margin-bottom: 20px;
-}
-
-.navigation{
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.navigationList{
-  display: flex;
-  flex-direction: column;
-  gap:5px
-}
-
-.searchInput {
-  width: 630px;
-  padding: 10px;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
-  text-align: center;
-}
 
 /* Центральный контейнер (секции фильмов) */
 .middleContainer {

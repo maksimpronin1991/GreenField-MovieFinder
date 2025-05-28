@@ -1,13 +1,13 @@
-import React from 'react';
 import styles from './homeScreen.module.css'
 import Slider from 'react-slick';
 
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from 'react-router-dom';
 
-const HomeScreen: React.FC = () => {
+import { Link } from 'react-router-dom';
+import Header from '../../components/header/header';
+
+const HomeScreen = () => {
     const moviePosters = [
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
@@ -45,21 +45,7 @@ const HomeScreen: React.FC = () => {
     return (
         <div className={styles.homeScreen}>
 
-            <div className={styles.topContainer}>
-                {/* Заголовок */}
-                <h1 className={styles.title}>The<br />Movie<br /> Tracker</h1>
-
-                {/* Поисковая строка */}
-                <div className={styles.searchBar}>
-                    <input type="text" placeholder="Search a movie or a series" className={styles.searchInput} />
-                </div>
-                <nav className={styles.navigation}>
-                    <ul className={styles.navigationList}>
-                        <li className="navigationItem"><Link to="/searchScreen" className="navugationLink">All Movie</Link></li>
-                        <li className="navigationItem"><Link to="/" className="navugationLink">Log out</Link></li>
-                    </ul>
-                </nav>
-            </div>
+            <Header/>
 
             <div className={styles.middleContainer}>
                 {/* Секция Currently Watching */}

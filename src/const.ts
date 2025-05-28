@@ -2,6 +2,6 @@ export enum AppRoute {
   Login = '/',
   Registration = '/registration',
   Home = '/home',
-  MovieScreen = '/movieScreen/:movieId',
+  MovieScreen = '/movieScreen/:movieId?',
   SearchScreen = '/searchScreen'
 }
