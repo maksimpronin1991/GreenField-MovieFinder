@@ -1,3 +1,4 @@
+import { AppRoute } from "../../const";
 import styles from "./loginScreen.module.css"
 import { Link } from 'react-router-dom';
 
@@ -15,10 +16,12 @@ const LoginScreen = () => {
       <form className={styles.formContainer}>
         <input type="text" placeholder="Login" className={styles.inputField} />
         <input type="password" placeholder="Password" className={styles.inputField} />
+
         <button className={styles.loginButton}>Login</button>
         <p className={styles.signupText}>
-          You don’t have an account?{' '}
-          <Link to="/registration" className={styles.signupLink}>SignUp</Link>
+          You don’t have an account?{' '} 
+          <Link to={AppRoute.Registration} className={styles.signupLink}>SignUp</Link> <span>or</span>
+          <Link to={AppRoute.SearchScreen} className={styles.freeEnter}>Skip</Link>
         </p>
       </form>
 

@@ -63,6 +63,18 @@
   font-size: 1rem;
 }
 
+.freeEnter{
+  width: 100%;
+  padding: 10px;
+
+  color: red;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
 .loginButton {
   width: 100%;
   padding: 10px;
@@ -86,7 +98,7 @@
 }
 
 .signupLink {
-  color: #007bff;
+  color: rgb(9, 214, 9);
   text-decoration: none;
   cursor: pointer;
 }
