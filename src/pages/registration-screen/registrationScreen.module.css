@@ -8,7 +8,7 @@
  .scrollingHeader {
   position: fixed;
   /* Фиксированное положение */
-  top: 30px;
+  top: 70px;
   left: 0;
   width: 100%;
   /* Занимает всю ширину экрана */

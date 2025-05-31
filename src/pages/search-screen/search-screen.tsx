@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import Header from '../../components/header/header';
+import { AppRoute } from '../../const';
 
 const SearchScreen = () => {
     const moviePosters = [
@@ -85,7 +86,7 @@ const SearchScreen = () => {
                     </div>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <Link to="/movieScreen" key={index}>
+                            <Link to={AppRoute.MovieScreen} key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                     <div className={styles.cardRating}>8</div>

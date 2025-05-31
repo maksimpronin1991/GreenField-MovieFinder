@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Link } from 'react-router-dom';
 import Header from '../../components/header/header';
+import { AppRoute } from '../../const';
 
 const HomeScreen = () => {
     const moviePosters = [
@@ -52,10 +53,10 @@ const HomeScreen = () => {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Currently Watching</h2>
                     <div className={styles.middleMovieContainer}>
-                        <Link to="/movieScreen" className={styles.movieCard}>
+                        <Link to={AppRoute.MovieScreen} className={styles.movieCard}>
                             <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
                         </Link>
-                        <Link to="/movieScreen"  className={styles.movieCard}>
+                        <Link to={AppRoute.MovieScreen}  className={styles.movieCard}>
                             <img src="src\img\Rectangle 39.jpg" alt="Movie Poster" className={styles.moviePoster} />
                         </Link>
                     </div>
@@ -65,15 +66,15 @@ const HomeScreen = () => {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Suggested To Watch</h2>
                     <div className={styles.middleMovieContainer}>
-                        <Link to="/movieScreen"  className={styles.movieCard}>
+                        <Link to={AppRoute.MovieScreen}  className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
                         </Link>
-                        <Link  to="/movieScreen" className={styles.movieCard}>
+                        <Link  to={AppRoute.MovieScreen} className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
                         </Link>
-                        <Link  to="/movieScreen" className={styles.movieCard}>
+                        <Link  to={AppRoute.MovieScreen} className={styles.movieCard}>
                             <img src="https://via.placeholder.com/150" alt="Movie Poster" className={styles.moviePoster} />
                             <span className={styles.rating}>8.7</span>
                         </Link>
@@ -88,7 +89,7 @@ const HomeScreen = () => {
                     <h2 className={styles.sectionTitle}>Previously Watched</h2>
                     <Slider {...settings}>
                         {moviePosters.map((poster, index) => (
-                            <Link to="/movieScreen"  key={index}>
+                            <Link to={AppRoute.MovieScreen}  key={index}>
                                 <div className={styles.movieCard}>
                                     <img src={poster} alt={`Movie Poster ${index}`} className={styles.moviePoster} />
                                 </div>
