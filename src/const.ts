@@ -5,3 +5,8 @@ export enum AppRoute {
   MovieScreen = '/movieScreen/:movieId?',
   SearchScreen = '/',
 }
+export enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}

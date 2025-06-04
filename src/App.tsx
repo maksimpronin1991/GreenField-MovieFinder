@@ -5,7 +5,8 @@ import RegistrationScreen from './pages/registration-screen/registrationScreen'
 import MovieScreen from './pages/movie-screen/movie-screen'
 import SearchScreen from './pages/search-screen/search-screen'
 import ErrorScreen from './pages/error-screen/errorScreen'
-import { AppRoute } from './const'
+import { AppRoute, AuthorizationStatus } from './const'
+import PrivateRoute from './components/private-route/private-route'
 
 function App() {
 
@@ -15,7 +16,11 @@ function App() {
       <Routes>
         <Route path={AppRoute.Login} element={<LoginScreen />} />
         <Route path={AppRoute.Registration} element={<RegistrationScreen />} />
-        <Route path={AppRoute.Home} element={<HomeScreen />} />
+        <Route path={AppRoute.Home} element={
+          <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+            <HomeScreen />
+          </PrivateRoute>
+        } />
         <Route path={AppRoute.MovieScreen} element={<MovieScreen />} />
         <Route path={AppRoute.SearchScreen} element={<SearchScreen />} />
         <Route path='*' element={<ErrorScreen />} />
