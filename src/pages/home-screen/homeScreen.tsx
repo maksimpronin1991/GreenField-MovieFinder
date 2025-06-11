@@ -45,7 +45,7 @@ const HomeScreen = () => {
 
     return (
         <div className={styles.homeScreen}>
-
+            <title>Home screen</title>
             <Header/>
 
             <div className={styles.middleContainer}>

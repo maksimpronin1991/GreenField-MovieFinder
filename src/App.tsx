@@ -17,7 +17,7 @@ function App() {
         <Route path={AppRoute.Login} element={<LoginScreen />} />
         <Route path={AppRoute.Registration} element={<RegistrationScreen />} />
         <Route path={AppRoute.Home} element={
-          <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+          <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
             <HomeScreen />
           </PrivateRoute>
         } />

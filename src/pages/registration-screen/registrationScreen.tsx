@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 const RegistrationScreen = () => {
   return (
     <div className={styles.registration}>
+      <title>Registration screen</title>
+
       {/* Бегущая строка во весь экран */}
       <div className={styles.scrollingHeader}>
         <h1 className={styles.scrollingText}>
@@ -23,16 +25,16 @@ const RegistrationScreen = () => {
         <button className={styles.registerButton}>Register</button>
 
 
-      {/* Ссылка для входа */}
-      <p className={styles.loginLink}>
-        Already have an account?{' '}
-        <Link to={AppRoute.Login} className={styles.link}>Login</Link>
-      </p>
+        {/* Ссылка для входа */}
+        <p className={styles.loginLink}>
+          Already have an account?{' '}
+          <Link to={AppRoute.Login} className={styles.link}>Login</Link>
+        </p>
       </form>
 
       {/* Нижняя часть экрана */}
       <div className={styles.footer}>
-      Built with ❤️ GreenField
+        Built with ❤️ GreenField
       </div>
     </div>
   );

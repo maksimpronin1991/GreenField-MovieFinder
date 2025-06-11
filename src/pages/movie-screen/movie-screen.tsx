@@ -8,10 +8,10 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/header/header';
 
 const MovieScreen = () => {
-const params = useParams();
+    const params = useParams();
 
-console.log(params)
-    
+    console.log(params)
+
     const moviePosters = [
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
@@ -34,8 +34,10 @@ console.log(params)
 
     return (
         <div className={styles.movieScreen}>
+            <title>Movie screen</title>
 
-        <Header/>
+
+            <Header />
 
             <div className={styles.middleContainer}>
                 {/* Секция Currently Watching */}

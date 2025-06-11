@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 const LoginScreen = () => {
   return (
     <div className={styles.loginScreen}>
+      <title>Login screen</title>
+
       {/* Бегущая строка во весь экран */}
       <div className={styles.scrollingHeader}>
         <h1 className={styles.scrollingText}>
@@ -19,7 +21,7 @@ const LoginScreen = () => {
 
         <button className={styles.loginButton}>Login</button>
         <p className={styles.signupText}>
-          You don’t have an account?{' '} 
+          You don’t have an account?{' '}
           <Link to={AppRoute.Registration} className={styles.signupLink}>SignUp</Link> <span>or</span>
           <Link to={AppRoute.SearchScreen} className={styles.freeEnter}>Skip</Link>
         </p>

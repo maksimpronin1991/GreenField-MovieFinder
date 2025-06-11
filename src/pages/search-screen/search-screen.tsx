@@ -1,7 +1,5 @@
 import styles from './search-screen.module.css'
 import Slider from 'react-slick';
-
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
@@ -9,6 +7,8 @@ import Header from '../../components/header/header';
 import { AppRoute } from '../../const';
 
 const SearchScreen = () => {
+
+
     const moviePosters = [
         "src/img/Rectangle 39.jpg",
         "src/img/Rectangle 39.jpg",
@@ -70,8 +70,10 @@ const SearchScreen = () => {
 
     return (
         <div className={styles.searchScreen}>
+            <title>Search screen</title>
 
-            <Header/>
+
+            <Header />
 
             {/* Секция Previously Watched */}
             <div className={styles.bottomContainer}>

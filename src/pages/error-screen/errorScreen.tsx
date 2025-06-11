@@ -11,7 +11,7 @@ const ErrorScreen = ({
   errorCode = 404,
   errorMessage = "Something went wrong. The page you're looking for doesn't exist or an error occurred.",
   showActions = true,
-}:ErrorScreenProps) => {
+}: ErrorScreenProps) => {
   const navigate = useNavigate();
 
   const getErrorTitle = () => {
@@ -28,14 +28,17 @@ const ErrorScreen = ({
   };
 
   return (
+
     <div className={styles.container}>
+      <title>Home screen</title>
+
       <div className={styles.content}>
         <div className={styles.animation}>
           <div className={styles.icon}>⚠️</div>
         </div>
         <h1 className={styles.title}>{getErrorTitle()}</h1>
         <p className={styles.message}>{errorMessage}</p>
-        
+
         {showActions && (
           <div className={styles.actions}>
             <button
